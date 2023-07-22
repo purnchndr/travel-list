@@ -3,7 +3,12 @@ const Stats = ({ items }) => {
   if (!length)
     return (
       <footer className="stats">
-        <em>Try adding some stuff in your list 📃</em>{" "}
+        <em>Try adding some stuff in your list 📃</em>
+        <p>
+          <small>
+            created by <a href="https://purnchndr.github.io"> Purnachandra</a>
+          </small>
+        </p>
       </footer>
     );
   const packed = items.reduce((acc, item) => (item.packed ? ++acc : acc), 0);
@@ -17,8 +22,13 @@ const Stats = ({ items }) => {
           {packed}, {percentages}% packing done.
         </em>
       ) : (
-        <em>You have packed all, just fly... 🛫</em>
+        <em>You have packed all, just fly... 🛫 </em>
       )}
+      <p>
+        <small>
+          created by <a href="https://purnchndr.github.io"> Purnachandra</a>
+        </small>
+      </p>
     </footer>
   );
 };
